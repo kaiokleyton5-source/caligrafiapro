@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-BR">
+    <meta name="google" content="notranslate">
+    <title>Minha Página</title>
+    <!-- BUILD_EASY_DATA:eyJlbGVtZW50cyI6W3siaWQiOiJlbF8xNzcxNTQ4MDQxMzMxXzc1cDk2aDZyNiIsInR5cGUiOiJzZWN0aW9uIiwic3R5bGVzIjp7ImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiIsImNoaWxkcmVuIjpbeyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfd2R3OGh1NWFxIiwidHlwZSI6ImhlYWRpbmciLCJzdHlsZXMiOnsicGFkZGluZyI6IjAgMCAxNnB4IiwiZm9udFNpemUiOiIzMnB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJmb250V2VpZ2h0IjoiNzAwIn0sImNvbnRlbnQiOiJUUkFOU0ZPUk1FIFNVQSBDQUxJR1JBRklBIEVNIDcgRElBUyEifSx7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV9mdjNtMWh5MnIiLCJ0eXBlIjoidGV4dCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMCAwIDI0cHgiLCJmb250U2l6ZSI6IjE4cHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiI2UwZTBlMCIsImZvbnRXZWlnaHQiOiI0MDAifSwiY29udGVudCI6IlNlIHZvY8OqIHF1ZXIgdGVyIHVtYSBsZXRyYSBib25pdGEgZSByZWRvbmRpbmhhLCBlc2NyZXZlciBjb20gbWFpcyBhZ2lsaWRhZGUgZSB0cmHDp29zIGZpcm1lcywgbyBNw6l0b2RvIFRyYcOnbyBDcmlhdGl2byDDqSBwcmEgdm9jw6ohIFNlcnZlIHBhcmEgYWR1bHRvcyBlIGNyaWFuw6dhcy4ifSx7ImlkIjoiZWxfMTc3MTU0OTAyMDcxMV9yMG5vMHBhbzQiLCJzcmMiOiJodHRwczovL2kuaWJiLmNvLzRadE5xTHE3L3V1eXV5LmpwZyIsInR5cGUiOiJpbWFnZSIsInN0eWxlcyI6eyJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiJhdXRvIiwiYW5pbWF0aW9uIjoibm9uZSIsImJvcmRlclJhZGl1cyI6IjhweCJ9LCJjb250ZW50IjoiIn0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfcW04bjU2M3M0IiwidHlwZSI6InNwYWNlciIsInN0eWxlcyI6eyJoZWlnaHQiOiIyNHB4IiwiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIn0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfdHNvZmpycmpmIiwiaHJlZiI6IiNvZmVydGEiLCJ0eXBlIjoiYnV0dG9uIiwic3R5bGVzIjp7InBhZGRpbmciOiIxOHB4IDQ4cHgiLCJmb250U2l6ZSI6IjE4cHgiLCJhbmltYXRpb24iOiJwdWxzZSIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJmb250V2VpZ2h0IjoiNzAwIiwiYm9yZGVyUmFkaXVzIjoiMTJweCIsImJhY2tncm91bmRDb2xvciI6IiNjMjNkZmYifSwiY29udGVudCI6IlFVRVJPIE1FTEhPUkFSIE1JTkhBIExFVFJBIEFHT1JBIn1dLCJzZWN0aW9uRGF0YSI6eyJwYWRkaW5nVG9wIjoiNDBweCIsInBhZGRpbmdMZWZ0IjoiMjBweCIsInBhZGRpbmdSaWdodCI6IjIwcHgiLCJwYWRkaW5nQm90dG9tIjoiNDBweCIsImJhY2tncm91bmRDb2xvciI6IiMwZjBmMWEifX0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfY2wwM3RjaXdvIiwidHlwZSI6InNlY3Rpb24iLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIiwiY2hpbGRyZW4iOlt7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV92bjBrOXFiZzAiLCJ0eXBlIjoiaGVhZGluZyIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMCAwIDhweCIsImZvbnRTaXplIjoiMjhweCIsImFuaW1hdGlvbiI6ImZhZGUtaW4iLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiZm9udFdlaWdodCI6IjcwMCJ9LCJjb250ZW50IjoiTyBRdWUgVm9jw6ogVmFpIFJlY2ViZXIifSx7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV8zNGM4YXAza3QiLCJ0eXBlIjoidGV4dCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMCAwIDMycHgiLCJmb250U2l6ZSI6IjE2cHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiI2EwYTBhMCIsImZvbnRXZWlnaHQiOiI0MDAifSwiY29udGVudCI6IkFjZXNzbyBjb21wbGV0byBhIHRvZG8gY29udGXDumRvIHByZW1pdW0sIHNlbSBsaW1pdGVzIn0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfcHdlaW1jeDNnIiwidHlwZSI6ImNhcmQiLCJzdHlsZXMiOnsicGFkZGluZyI6IjI0cHgiLCJjYXJkSWNvbiI6ImNoZWNrIiwiYW5pbWF0aW9uIjoic2xpZGUtdXAiLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiYm9yZGVyQ29sb3IiOiIjMmEyYTNlIiwiYm9yZGVyV2lkdGgiOiIxcHgiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiY2FyZEljb25Db2xvciI6IiNhODU1ZjciLCJiYWNrZ3JvdW5kQ29sb3IiOiIjMWUxZTJlIn0sImNvbnRlbnQiOiIrMzAwIGV4ZXJjw61jaW9zIHBhcmEgbWVsaG9yYXIgc3VhIGVzY3JpdGF8In0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfYTM1N2Z0dmRhIiwidHlwZSI6ImNhcmQiLCJzdHlsZXMiOnsicGFkZGluZyI6IjI0cHgiLCJjYXJkSWNvbiI6InN0YXIiLCJhbmltYXRpb24iOiJzbGlkZS11cCIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJib3JkZXJDb2xvciI6IiMyYTJhM2UiLCJib3JkZXJXaWR0aCI6IjFweCIsImJvcmRlclJhZGl1cyI6IjE2cHgiLCJjYXJkSWNvbkNvbG9yIjoiI2E4NTVmNyIsImJhY2tncm91bmRDb2xvciI6IiMxZTFlMmUifSwiY29udGVudCI6IkNvbnRlw7pkbyBQcmVtaXVtfCJ9LHsiaWQiOiJlbF8xNzcxNTQ4MDQxMzMxXzFqem5jN2N4bSIsInR5cGUiOiJjYXJkIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiY2FyZEljb24iOiJ6YXAiLCJhbmltYXRpb24iOiJzbGlkZS11cCIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJib3JkZXJDb2xvciI6IiMyYTJhM2UiLCJib3JkZXJXaWR0aCI6IjFweCIsImJvcmRlclJhZGl1cyI6IjE2cHgiLCJjYXJkSWNvbkNvbG9yIjoiI2E4NTVmNyIsImJhY2tncm91bmRDb2xvciI6IiMxZTFlMmUifSwiY29udGVudCI6Ik3DqXRvZG8gcHLDoXRpY28gZSBkaXZlcnRpZG98In0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfc3MzbndtNG4yIiwidHlwZSI6ImNhcmQiLCJzdHlsZXMiOnsicGFkZGluZyI6IjI0cHgiLCJjYXJkSWNvbiI6InNoaWVsZCIsImFuaW1hdGlvbiI6InNsaWRlLXVwIiwidGV4dENvbG9yIjoiI2ZmZmZmZiIsImJvcmRlckNvbG9yIjoiIzJhMmEzZSIsImJvcmRlcldpZHRoIjoiMXB4IiwiYm9yZGVyUmFkaXVzIjoiMTZweCIsImNhcmRJY29uQ29sb3IiOiIjYTg1NWY3IiwiYmFja2dyb3VuZENvbG9yIjoiIzFlMWUyZSJ9LCJjb250ZW50IjoiUmVzdWx0YWRvcyB2aXPDrXZlaXMgZW0gNyBkaWF8In1dLCJzZWN0aW9uRGF0YSI6eyJwYWRkaW5nVG9wIjoiNDBweCIsInBhZGRpbmdMZWZ0IjoiMjBweCIsInBhZGRpbmdSaWdodCI6IjIwcHgiLCJwYWRkaW5nQm90dG9tIjoiNDBweCIsImJhY2tncm91bmRDb2xvciI6IiMwZjBmMWEifX0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfcXpzNDM1cDcwIiwidHlwZSI6InNlY3Rpb24iLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIiwiY2hpbGRyZW4iOlt7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV93NWo2N2pwdzAiLCJ0eXBlIjoiaGVhZGluZyIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMCAwIDMycHgiLCJmb250U2l6ZSI6IjI4cHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiI2ZmZmZmZiIsImZvbnRXZWlnaHQiOiI3MDAifSwiY29udGVudCI6Ik8gUXVlIERpemVtIE5vc3NvcyBBbHVub3MifSx7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV96eG1waWE1bmciLCJ0eXBlIjoiY2Fyb3VzZWwiLCJzdHlsZXMiOnsid2lkdGgiOiIxMDAlIiwiaGVpZ2h0IjoiNTAwcHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwiYm9yZGVyUmFkaXVzIjoiMTZweCJ9LCJjb250ZW50IjoiIiwiY2Fyb3VzZWxEYXRhIjp7ImltYWdlcyI6WyJodHRwczovL2kuaWJiLmNvLzVoY0hZd2t5L2RzZC5qcGciLCJodHRwczovL2kuaWJiLmNvL1I0aEZZNktKL2dmZy53ZWJwIiwiaHR0cHM6Ly9pLmliYi5jby9aUlljRG5mVC9nZ2cuanBnIl0sImF1dG9QbGF5Ijp0cnVlLCJpbnRlcnZhbCI6NDAwMH19LHsiaWQiOiJlbF8xNzcxNzk4NDYyMzA0X3lpczcwYnozZSIsInR5cGUiOiJ0ZXN0aW1vbmlhbCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMjRweCIsImFuaW1hdGlvbiI6Im5vbmUiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwiYm9yZGVyQ29sb3IiOiIjZTVlN2ViIiwiYm9yZGVyV2lkdGgiOiIxcHgiLCJib3JkZXJSYWRpdXMiOiIxMnB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2ZmZmZmZiJ9LCJjb250ZW50IjoiIiwidGVzdGltb25pYWxEYXRhIjp7Im5hbWUiOiJNYXJpYSBTaWx2YSIsImltYWdlIjoiaHR0cHM6Ly9pbWFnZXMudW5zcGxhc2guY29tL3Bob3RvLTE0OTQ3OTAxMDgzNzctYmU5YzI5YjI5MzMwP3c9MTUwIiwicmF0aW5nIjo1LCJ0ZXN0aW1vbmlhbCI6Ik1pbmhhIENhbGlncmFmaWEgbWVsaG9yb3UgbXVpdG9sISBTdXBlcm91IHRvZGFzIGFzIG1pbmhhcyBleHBlY3RhdGl2YXMuIFJlY29tZW5kbyBhIHRvZG9zISJ9fV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiI0MHB4IiwicGFkZGluZ0xlZnQiOiIyMHB4IiwicGFkZGluZ1JpZ2h0IjoiMjBweCIsInBhZGRpbmdCb3R0b20iOiI0MHB4IiwiYmFja2dyb3VuZENvbG9yIjoiIzBmMGYxYSJ9fSx7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV8waXh4d211a2kiLCJ0eXBlIjoic2VjdGlvbiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIiLCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzcxNTQ4MDQxMzMxX3N6MWFhZXdmeSIsInR5cGUiOiJhbmNob3IiLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50Ijoib2ZlcnRhIn0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfb3FtZXcyOHVxIiwidHlwZSI6ImhlYWRpbmciLCJzdHlsZXMiOnsicGFkZGluZyI6IjAgMCAzMnB4IiwiZm9udFNpemUiOiIyOHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJmb250V2VpZ2h0IjoiNzAwIn0sImNvbnRlbnQiOiJFc2NvbGhhIFNldSBQbGFubyJ9LHsiaWQiOiJlbF8xNzcxNTQ4MDQxMzMxXzA1b25xaDdmYiIsInR5cGUiOiJvZmZlciIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMzJweCIsImFuaW1hdGlvbiI6InNjYWxlIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiIzFhMWEyZSIsImJvcmRlckNvbG9yIjoiI2U1ZTdlYiIsImJvcmRlcldpZHRoIjoiMXB4IiwiYm9yZGVyUmFkaXVzIjoiMTZweCIsImJhY2tncm91bmRDb2xvciI6IiNmZmZmZmYifSwiY29udGVudCI6IiIsIm9mZmVyRGF0YSI6eyJwb3B1cCI6eyJiYWRnZSI6IlVQR1JBREUgUFJFTUlVTSIsInByaWNlIjoiUiQgMzcsMDAiLCJ0aXRsZSI6IlBhY290ZSBQcmVtaXVtIiwiZW5hYmxlZCI6dHJ1ZSwiYmVuZWZpdHMiOlsiVHVkbyBkbyBwYWNvdGUgYsOhc2ljbyIsIisyNTAgZXhlcmPDrWNpb3MgY2FsaWdyYWZpYSBiw7RudXMiLCJNZWdhIHBhY2sgYXRpdmlkYWRlcyBpbmZhbnRpcyAoKzM1MCBww6FnaW5hcykiLCJBcG9zdGlsYSByZWZvcsOnbyBwYXJhIGNyaWFuw6dhcyIsIkFsZmFiZXRvIGxldHJhIGRlIGZvcm1hIiwiQWxmYWJldG8gbGV0cmEgaXTDoWxpY28iLCJBbGZhYmV0byBsZXRyYSBtZWRpZXZhbCIsIkFsZmFiZXRvIGxldHJhIGp1dGFpIGPDtHJ0ZSArIHbDrWRlbyIsIkLDtG51cyBleGNsdXNpdm8hIiwiQmVuZWbDrWNpbyBFeGNsdXNpdm86IEFjZXNzbyB2aXRhbMOtY2lvISArIEF0dWFsaXphw6fDtWVzIG1lbnNhaXMiXSwiYWNjZW50Q29sb3IiOiIjZDRhODUzIiwicGF5bWVudFR5cGUiOiJBY2Vzc28gVklUQUzDjUNJTyIsInByaW1hcnlCdXR0b25VcmwiOiJodHRwczovL3BheS5sb3dpZnkuY29tLmJyL2dvLnBocD9vZmZlcj10ajhtMGQ5IiwicHJpbWFyeUJ1dHRvblRleHQiOiJRdWVybyBvIFByZW1pdW0iLCJzZWNvbmRhcnlCdXR0b25VcmwiOiJodHRwczovL3BheS5sb3dpZnkuY29tLmJyL2dvLnBocD9vZmZlcj1mdTV4MXBoIiwic2Vjb25kYXJ5QnV0dG9uVGV4dCI6IlF1ZXJvIHPDsyBhIG9mZXJ0YSBiw6FzaWNhIn0sInByaWNlIjoiUiQgMjcsMDAiLCJ0aXRsZSI6IlBsYW5vIELDoXNpY28iLCJiZW5lZml0cyI6WyJDb21ibyArMzAwIGF0aXZpZGFkZXMgY2FsaWdyYWZpYSIsIk3Ds2R1bG8gZGUgY29vcmRlbmHDp8OjbyBtb3RvcmEiLCJNw7NkdWxvIGRlIGFsZmFiZXRvIGN1cnNpdm8iLCJNw7NkdWxvIGRlIGxldHRlcmluZyJdLCJidXR0b25VcmwiOiIjIiwiYnV0dG9uVGV4dCI6IlF1ZXJvIG8gUGxhbm8gQsOhc2ljbyIsInByaWNlQ29sb3IiOiIjMjJjNTVlIiwiYWNjZW50Q29sb3IiOiIjMjJjNTVlIiwiYm9yZGVyQ29sb3IiOiIjZTVlN2ViIiwiYnV0dG9uQ29sb3IiOiIjMjJjNTVlIiwicGF5bWVudFR5cGUiOiIoUGFnYW1lbnRvIMO6bmljbykifX0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfbHZydDk1dGU2IiwidHlwZSI6InNwYWNlciIsInN0eWxlcyI6eyJoZWlnaHQiOiIxNnB4IiwiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIn0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfaTh6cGl2bDh1IiwidHlwZSI6Im9mZmVyIiwic3R5bGVzIjp7InBhZGRpbmciOiIzMnB4IiwiYW5pbWF0aW9uIjoic2NhbGUiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiYm9yZGVyQ29sb3IiOiIjYzIzZGZmIiwiYm9yZGVyV2lkdGgiOiIycHgiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYmFja2dyb3VuZENvbG9yIjoiIzFlMWUyZSJ9LCJjb250ZW50IjoiIiwib2ZmZXJEYXRhIjp7InByaWNlIjoiUiQgNDcsMDAiLCJ0aXRsZSI6IlBsYW5vIFZJUCIsImJlbmVmaXRzIjpbIlR1ZG8gZG8gcGFjb3RlIGLDoXNpY29cbiIsIisyNTAgZXhlcmPDrWNpb3MgY2FsaWdyYWZpYSBiw7RudXNcbiIsIk1lZ2EgcGFjayBhdGl2aWRhZGVzIGluZmFudGlzICgrMzUwIHDDoWdpbmFzKVxuIiwiQXBvc3RpbGEgcmVmb3LDp28gcGFyYSBjcmlhbsOnYXNcbiIsIkFsZmFiZXRvIGxldHJhIGRlIGZvcm1hXG4iLCJBbGZhYmV0byBsZXRyYSBpdMOhbGljb1xuIiwiQWxmYWJldG8gbGV0cmEgbWVkaWV2YWxcbiIsIkFsZmFiZXRvIGxldHJhIGp1dGFpIGPDtHJ0ZSArIHbDrWRlb1xuIiwiQsO0bnVzIGV4Y2x1c2l2byFcbiIsIkJlbmVmw61jaW8gRXhjbHVzaXZvOiBBY2Vzc28gdml0YWzDrWNpbyEgKyBBdHVhbGl6YcOnw7VlcyBtZW5zYWlzXG4iXSwiYnV0dG9uVXJsIjoiaHR0cHM6Ly9wYXkubG93aWZ5LmNvbS5ici9nby5waHA/b2ZmZXI9Z3Q4NmpsMyIsImJ1dHRvblRleHQiOiJRdWVybyBHYXJhbnRpciBNZXUgQWNlc3NvIFZJUCIsImFjY2VudENvbG9yIjoiI2MyM2RmZiIsImJ1dHRvbkNvbG9yIjoiI2MyM2RmZiIsInBheW1lbnRUeXBlIjoiQWNlc3NvIFZJUCBWaXRhbMOtY2lvIn19XSwic2VjdGlvbkRhdGEiOnsicGFkZGluZ1RvcCI6IjQwcHgiLCJwYWRkaW5nTGVmdCI6IjIwcHgiLCJwYWRkaW5nUmlnaHQiOiIyMHB4IiwicGFkZGluZ0JvdHRvbSI6IjQwcHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjMGYwZjFhIn19LHsiaWQiOiJlbF8xNzcxNTQ4MDQxMzMxX2NybmRzamlncCIsInR5cGUiOiJzZWN0aW9uIiwic3R5bGVzIjp7ImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiIsImNoaWxkcmVuIjpbeyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfeWZqNHdkZnI3IiwidHlwZSI6Imd1YXJhbnRlZSIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMzJweCIsImFuaW1hdGlvbiI6ImZhZGUtaW4iLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiYm9yZGVyUmFkaXVzIjoiMTZweCIsImJhY2tncm91bmRDb2xvciI6IiMxZTFlMmUifSwiY29udGVudCI6IiIsImd1YXJhbnRlZURhdGEiOnsiZGF5cyI6NywidGl0bGUiOiJHYXJhbnRpYSBkZSA3IERpYXMiLCJmZWF0dXJlcyI6WyJTZW0gYnVyb2NyYWNpYSIsIkRldm9sdcOnw6NvIGltZWRpYXRhIiwiU2VtIHBlcmd1bnRhcyJdLCJhY2NlbnRDb2xvciI6IiNhNjAwZmYiLCJkZXNjcmlwdGlvbiI6IlNlIHZvY8OqIG7Do28gZmljYXIgMTAwJSBzYXRpc2ZlaXRvIGNvbSBvIGFjZXNzbywgZGV2b2x2ZW1vcyBzZXUgZGluaGVpcm8gaW50ZWdyYWxtZW50ZSBlbSBhdMOpIDcgZGlhcyBhcMOzcyBhIGNvbXByYS4ifX1dLCJzZWN0aW9uRGF0YSI6eyJwYWRkaW5nVG9wIjoiNDBweCIsInBhZGRpbmdMZWZ0IjoiMjBweCIsInBhZGRpbmdSaWdodCI6IjIwcHgiLCJwYWRkaW5nQm90dG9tIjoiNDBweCIsImJhY2tncm91bmRDb2xvciI6IiMwZjBmMWEifX0seyJpZCI6ImVsXzE3NzE1NDgwNDEzMzFfaGh5d28xamNhIiwidHlwZSI6InNlY3Rpb24iLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIiwiY2hpbGRyZW4iOlt7ImlkIjoiZWxfMTc3MTU0ODA0MTMzMV92bHRpYXdjYTgiLCJ0eXBlIjoiZmFxIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRDb2xvciI6IiNmZmZmZmYiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYmFja2dyb3VuZENvbG9yIjoiIzFlMWUyZSJ9LCJjb250ZW50IjoiIiwiZmFxRGF0YSI6eyJpdGVtcyI6W3siYW5zd2VyIjoiQXDDs3MgYSBjb21wcmEsIHZvY8OqIHJlY2ViZXLDoSBhY2Vzc28gaW1lZGlhdG8gYW8gY29udGXDumRvIGRpZ2l0YWwuXG5cbiIsInF1ZXN0aW9uIjoiQ29tbyBmdW5jaW9uYSBvIGFjZXNzbz8ifSx7ImFuc3dlciI6Ik7Do28hIE8gcGFnYW1lbnRvIMOpIMO6bmljby4gVm9jw6ogcGFnYSB1bWEgdmV6IGUgdGVtIGFjZXNzbyBwZWxvIHRlbXBvIGRvIHBsYW5vIGVzY29saGlkby4iLCJxdWVzdGlvbiI6Ik8gcGFnYW1lbnRvIMOpIHJlY29ycmVudGU/In0seyJhbnN3ZXIiOiJPZmVyZWNlbW9zIGdhcmFudGlhIGRlIDcgZGlhcy4gU2UgbsOjbyBmaWNhciBzYXRpc2ZlaXRvLCBkZXZvbHZlbW9zIDEwMCUgZG8gc2V1IGRpbmhlaXJvLCBzZW0gcGVyZ3VudGFzLiIsInF1ZXN0aW9uIjoiRSBzZSBldSBuw6NvIGdvc3Rhcj8ifV0sImFjY2VudENvbG9yIjoiI2E2MDBmZiJ9fSx7ImlkIjoiZWxfMTc3MTU1MTAwNjQ1M185MTlwY2ZwYWYiLCJ0eXBlIjoiaHRtbCIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiI8IS0tIE1ldGEgUGl4ZWwgQ29kZSAtLT5cbjxzY3JpcHQ+XG4hZnVuY3Rpb24oZixiLGUsdixuLHQscylcbntpZihmLmZicSlyZXR1cm47bj1mLmZicT1mdW5jdGlvbigpe24uY2FsbE1ldGhvZD9cbm4uY2FsbE1ldGhvZC5hcHBseShuLGFyZ3VtZW50cyk6bi5xdWV1ZS5wdXNoKGFyZ3VtZW50cyl9O1xuaWYoIWYuX2ZicSlmLl9mYnE9bjtuLnB1c2g9bjtuLmxvYWRlZD0hMDtuLnZlcnNpb249JzIuMCc7XG5uLnF1ZXVlPVtdO3Q9Yi5jcmVhdGVFbGVtZW50KGUpO3QuYXN5bmM9ITA7XG50LnNyYz12O3M9Yi5nZXRFbGVtZW50c0J5VGFnTmFtZShlKVswXTtcbnMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUodCxzKX0od2luZG93LCBkb2N1bWVudCwnc2NyaXB0JyxcbidodHRwczovL2Nvbm5lY3QuZmFjZWJvb2submV0L2VuX1VTL2ZiZXZlbnRzLmpzJyk7XG5mYnEoJ2luaXQnLCAnMTI5MjY5NjEwNTg4MTg5OScpO1xuZmJxKCd0cmFjaycsICdQYWdlVmlldycpO1xuPC9zY3JpcHQ+XG48bm9zY3JpcHQ+PGltZyBoZWlnaHQ9XCIxXCIgd2lkdGg9XCIxXCIgc3R5bGU9XCJkaXNwbGF5Om5vbmVcIlxuc3JjPVwiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3RyP2lkPTEyOTI2OTYxMDU4ODE4OTkmZXY9UGFnZVZpZXcmbm9zY3JpcHQ9MVwiXG4vPjwvbm9zY3JpcHQ+XG48IS0tIEVuZCBNZXRhIFBpeGVsIENvZGUgLS0+In0seyJpZCI6ImVsXzE3NzE2NDE1NDE0MjVfajcxcXZ5NGJyIiwidHlwZSI6Imh0bWwiLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiPGRpdiBzdHlsZT1cInBhZGRpbmc6IDIwcHg7IHRleHQtYWxpZ246IGNlbnRlcjtcIj48IS0tIE1ldGEgUGl4ZWwgQ29kZSAtLT5cbjxzY3JpcHQ+XG4hZnVuY3Rpb24oZixiLGUsdixuLHQscylcbntpZihmLmZicSlyZXR1cm47bj1mLmZicT1mdW5jdGlvbigpe24uY2FsbE1ldGhvZD9cbm4uY2FsbE1ldGhvZC5hcHBseShuLGFyZ3VtZW50cyk6bi5xdWV1ZS5wdXNoKGFyZ3VtZW50cyl9O1xuaWYoIWYuX2ZicSlmLl9mYnE9bjtuLnB1c2g9bjtuLmxvYWRlZD0hMDtuLnZlcnNpb249JzIuMCc7XG5uLnF1ZXVlPVtdO3Q9Yi5jcmVhdGVFbGVtZW50KGUpO3QuYXN5bmM9ITA7XG50LnNyYz12O3M9Yi5nZXRFbGVtZW50c0J5VGFnTmFtZShlKVswXTtcbnMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUodCxzKX0od2luZG93LCBkb2N1bWVudCwnc2NyaXB0JyxcbidodHRwczovL2Nvbm5lY3QuZmFjZWJvb2submV0L2VuX1VTL2ZiZXZlbnRzLmpzJyk7XG5mYnEoJ2luaXQnLCAnMTI5MjY5NjEwNTg4MTg5OScpO1xuZmJxKCd0cmFjaycsICdQYWdlVmlldycpO1xuPC9zY3JpcHQ+XG48bm9zY3JpcHQ+PGltZyBoZWlnaHQ9XCIxXCIgd2lkdGg9XCIxXCIgc3R5bGU9XCJkaXNwbGF5Om5vbmVcIlxuc3JjPVwiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL3RyP2lkPTEyOTI2OTYxMDU4ODE4OTkmZXY9UGFnZVZpZXcmbm9zY3JpcHQ9MVwiXG4vPjwvbm9zY3JpcHQ+XG48IS0tIEVuZCBNZXRhIFBpeGVsIENvZGUgLS0+PC9kaXY+In0seyJpZCI6ImVsXzE3NzE3MjE0NjA0MjhfOHkyM3R2cTZnIiwidHlwZSI6Imh0bWwiLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiPGRpdiBzdHlsZT1cInBhZGRpbmc6IDIwcHg7IHRleHQtYWxpZ246IGNlbnRlcjtcIj48c2NyaXB0PlxuICB3aW5kb3cucGl4ZWxJZCA9IFwiNjk5YTUyNDJjN2NjZGYyNmM0MzE5NDEyXCI7XG4gIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudChcInNjcmlwdFwiKTtcbiAgYS5zZXRBdHRyaWJ1dGUoXCJhc3luY1wiLCBcIlwiKTtcbiAgYS5zZXRBdHRyaWJ1dGUoXCJkZWZlclwiLCBcIlwiKTtcbiAgYS5zZXRBdHRyaWJ1dGUoXCJzcmNcIiwgXCJodHRwczovL2Nkbi51dG1pZnkuY29tLmJyL3NjcmlwdHMvcGl4ZWwvcGl4ZWwuanNcIik7XG4gIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoYSk7XG48L3NjcmlwdD48L2Rpdj4ifV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiI0MHB4IiwicGFkZGluZ0xlZnQiOiIyMHB4IiwicGFkZGluZ1JpZ2h0IjoiMjBweCIsInBhZGRpbmdCb3R0b20iOiI2MHB4IiwiYmFja2dyb3VuZENvbG9yIjoiIzBmMGYxYSJ9fV0sInBhZ2VTdHlsZXMiOnsiYmFja2dyb3VuZENvbG9yIjoiIzBmMGYxYSIsIm1heFdpZHRoIjoiNDgwcHgiLCJwYWRkaW5nIjoiMjBweCIsInVzZUdyYWRpZW50IjpmYWxzZSwiZ3JhZGllbnRDb2xvcjEiOiIjMWExYTJlIiwiZ3JhZGllbnRDb2xvcjIiOiIjMGYwZjFhIiwiZ3JhZGllbnREaXJlY3Rpb24iOiJ0byBib3R0b20iLCJmb250RmFtaWx5IjoiSW50ZXIsIHNhbnMtc2VyaWYifSwic2NyaXB0U2V0dGluZ3MiOnsidXRtaWZ5U2NyaXB0IjpmYWxzZSwiZmFjZWJvb2tQaXhlbCI6ZmFsc2UsImZhY2Vib29rUGl4ZWxJZCI6IiIsInV0bWlmeVBpeGVsIjpmYWxzZSwidXRtaWZ5UGl4ZWxJZCI6IiIsImJhY2tSZWRpcmVjdCI6ZmFsc2UsImJhY2tSZWRpcmVjdFVybCI6IiIsInVyZ2VuY3lCYXIiOnRydWUsInVyZ2VuY3lCYXJTdHlsZSI6InRpbWVyIiwidXJnZW5jeUJhclRleHQiOiJFc3NhIHByb21vw6fDo28gYWNhYmEgZW0iLCJ1cmdlbmN5QmFyTWludXRlcyI6MjAsInVyZ2VuY3lCYXJCZ0NvbG9yIjoiI2RjMjYyNiIsInVyZ2VuY3lCYXJUZXh0Q29sb3IiOiIjZmZmZmZmIiwidXJnZW5jeUJhckhpZ2hsaWdodENvbG9yIjoiI2ZmZmYwMCIsImZha2VQdXJjaGFzZSI6dHJ1ZSwiZmFrZVB1cmNoYXNlR2VuZGVyIjoiYm90aCIsImZha2VQdXJjaGFzZUludGVydmFsIjoxNSwiZmFrZVB1cmNoYXNlQmdDb2xvciI6IiMyMmM1NWUiLCJmYWtlUHVyY2hhc2VUZXh0Q29sb3IiOiIjZmZmZmZmIiwiZmFrZVB1cmNoYXNlUHJvZHVjdE5hbWUiOiJBY2Vzc28gVklQIiwiZml4ZWRCdXR0b24iOmZhbHNlLCJmaXhlZEJ1dHRvblRleHQiOiJDT01QUkFSIEFHT1JBIiwiZml4ZWRCdXR0b25VcmwiOiIjIiwiZml4ZWRCdXR0b25CZ0NvbG9yIjoiI2RjMjYyNiIsImZpeGVkQnV0dG9uVGV4dENvbG9yIjoiI2ZmZmZmZiIsImZpeGVkQnV0dG9uQ29udGFpbmVyQmdDb2xvciI6InJnYmEoMCwwLDAsMC44KSIsImV4aXRQb3B1cCI6ZmFsc2UsImV4aXRQb3B1cFRpdGxlIjoiRXNwZXJlISIsImV4aXRQb3B1cFRleHQiOiJWb2PDqiBlc3TDoSBwcmVzdGVzIGEgcGVyZGVyIGVzc2Egb3BvcnR1bmlkYWRlIMO6bmljYSEiLCJleGl0UG9wdXBCdXR0b25UZXh0IjoiUVVFUk8gQVBST1ZFSVRBUiIsImV4aXRQb3B1cEJ1dHRvblVybCI6IiMiLCJleGl0UG9wdXBCZ0NvbG9yIjoiIzFhMWEyZSIsImV4aXRQb3B1cFRleHRDb2xvciI6IiNmZmZmZmYiLCJleGl0UG9wdXBCdXR0b25CZ0NvbG9yIjoiIzIyYzU1ZSIsImV4aXRQb3B1cEJ1dHRvblRleHRDb2xvciI6IiNmZmZmZmYiLCJleGl0UG9wdXBJbWFnZSI6IiIsImV4aXRQb3B1cENsb3NlQmdDb2xvciI6InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIsImV4aXRQb3B1cENsb3NlSWNvbkNvbG9yIjoiI2ZmZmZmZiIsImV4aXRQb3B1cERlY2xpbmVUZXh0IjoiTsOjbywgb2JyaWdhZG8iLCJleGl0UG9wdXBEZWNsaW5lQmdDb2xvciI6InRyYW5zcGFyZW50IiwiZXhpdFBvcHVwRGVjbGluZVRleHRDb2xvciI6IiM5OTk5OTkiLCJjbG9ha2VyRW5hYmxlZCI6ZmFsc2UsImNsb2FrZXJCbG9ja0Rlc2t0b3AiOmZhbHNlLCJjbG9ha2VyQmxvY2tGb3JlaWduIjpmYWxzZSwiY2xvYWtlckJsb2NrQm90cyI6dHJ1ZSwiY2xvYWtlckJsb2NrUmVmZXJyZXJzIjpmYWxzZSwiY2xvYWtlckJsb2NrZWRSZWZlcnJlcnMiOiIiLCJjbG9ha2VyUmVkaXJlY3RVcmwiOiJodHRwczovL2dvb2dsZS5jb20iLCJjbG9ha2VyUmVkaXJlY3RJbkZyYW1lIjpmYWxzZSwiY2xvYWtlckFudGlJbnNwZWN0IjpmYWxzZSwiY2xvYWtlckFudGlTY3JlZW5zaG90IjpmYWxzZSwiY2xvYWtlclNlY3JldFRva2VuIjoiIiwiY2xvYWtlclRva2VuQnlwYXNzIjpmYWxzZSwiY2xvYWtlclJlcXVpcmVVdG1Tb3VyY2UiOmZhbHNlLCJjbG9ha2VyQWxsb3dlZFV0bVNvdXJjZXMiOiJmYiwgaWcsIGluc3RhZ3JhbSwgZmFjZWJvb2siLCJleGl0UG9wdXBFbmFibGVkIjpmYWxzZSwiZmFrZU5vdGlmaWNhdGlvbnNFbmFibGVkIjpmYWxzZX19:END_BUILD_EASY_DATA -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 100%;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0f0f1a;
+            min-height: 100%;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+            max-width: 100vw;
+            -webkit-overflow-scrolling: touch;
+            touch-action: pan-y;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #0f0f1a;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+        
+        .content > :not(.section) {
+            margin-bottom: 16px;
+        }
+        
+        .content > :not(.section):last-child {
+            margin-bottom: 0;
+        }
+        
+        .content > .section {
+            margin-bottom: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulseBtn {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        @keyframes shakeBtn {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+            95% { transform: translateX(0); }
+        }
+        
+        @keyframes glowBtn {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px currentColor, 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0px;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin: calc(-1 * 20px) calc(-1 * 20px) 0; width: calc(100% + 2 * 20px); background-color:#dc2626;color:#ffffff;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;display:flex;justify-content:center;align-items:center;gap:8px;font-family:Arial,sans-serif;">
+              <span>Essa promoção acaba em</span>
+              <span id="urgency-timer" style="background-color:rgba(0,0,0,0.2);padding:4px 12px;border-radius:4px;font-family:monospace;font-size:16px;">00:00</span>
+            </div>
+        <div class="content">
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #ffffff; font-size: 32px; font-weight: 700; text-align: center; padding: 0 0 16px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0s; opacity: 0;">TRANSFORME SUA CALIGRAFIA EM 7 DIAS!</h2>
+<p style="color: #e0e0e0; font-size: 18px; font-weight: 400; text-align: center; padding: 0 0 24px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;">Se você quer ter uma letra bonita e redondinha, escrever com mais agilidade e traços firmes, o Método Traço Criativo é pra você! Serve para adultos e crianças.</p>
+<div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://i.ibb.co/4ZtNqLq7/uuyuy.jpg" alt="Imagem" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;  " /></div>
+<div style="height: 24px;"></div>
+<div style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+        <a href="#oferta"  onclick="event.preventDefault();event.stopImmediatePropagation();var id='oferta';setTimeout(function(){var t=document.getElementById(id);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});},10);" style="background-color: #c23dff; color: #ffffff; font-size: 18px; font-weight: 700; text-align: center; padding: 18px 48px; border-radius: 12px; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; display: inline-block; text-decoration: none; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">QUERO MELHORAR MINHA LETRA AGORA</a>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #ffffff; font-size: 28px; font-weight: 700; text-align: center; padding: 0 0 8px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;">O Que Você Vai Receber</h2>
+<p style="color: #a0a0a0; font-size: 16px; font-weight: 400; text-align: center; padding: 0 0 32px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.2s; opacity: 0;">Acesso completo a todo conteúdo premium, sem limites</p>
+<div style="background-color: #1e1e2e; color: #ffffff; padding: 24px; border-radius: 16px; border-color: #2a2a3e; border-width: 1px; border-style: solid; animation: slideUp 0.6s ease-out forwards; animation-delay: 0.30000000000000004s; opacity: 0;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; flex-direction: row;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #a855f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+            <div style="flex: 1;">
+              <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">+300 exercícios para melhorar sua escrita</h3>
+              <p style="font-size: 14px; opacity: 0.8; margin: 0;"></p>
+            </div>
+          </div>
+        </div>
+<div style="background-color: #1e1e2e; color: #ffffff; padding: 24px; border-radius: 16px; border-color: #2a2a3e; border-width: 1px; border-style: solid; animation: slideUp 0.6s ease-out forwards; animation-delay: 0.4s; opacity: 0;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; flex-direction: row;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #a855f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+            <div style="flex: 1;">
+              <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">Conteúdo Premium</h3>
+              <p style="font-size: 14px; opacity: 0.8; margin: 0;"></p>
+            </div>
+          </div>
+        </div>
+<div style="background-color: #1e1e2e; color: #ffffff; padding: 24px; border-radius: 16px; border-color: #2a2a3e; border-width: 1px; border-style: solid; animation: slideUp 0.6s ease-out forwards; animation-delay: 0.5s; opacity: 0;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; flex-direction: row;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #a855f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+            <div style="flex: 1;">
+              <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">Método prático e divertido</h3>
+              <p style="font-size: 14px; opacity: 0.8; margin: 0;"></p>
+            </div>
+          </div>
+        </div>
+<div style="background-color: #1e1e2e; color: #ffffff; padding: 24px; border-radius: 16px; border-color: #2a2a3e; border-width: 1px; border-style: solid; animation: slideUp 0.6s ease-out forwards; animation-delay: 0.6000000000000001s; opacity: 0;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; flex-direction: row;">
+            <div style="width: 24px; height: 24px; border-radius: 50%; background-color: #a855f7; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+            <div style="flex: 1;">
+              <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">Resultados visíveis em 7 dia</h3>
+              <p style="font-size: 14px; opacity: 0.8; margin: 0;"></p>
+            </div>
+          </div>
+        </div></div></div>
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #ffffff; font-size: 28px; font-weight: 700; text-align: center; padding: 0 0 32px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.2s; opacity: 0;">O Que Dizem Nossos Alunos</h2>
+<div style="display: flex; justify-content: center;">
+        <div style="position: relative; overflow: hidden; width: 100%; max-width: 100%; border-radius: 16px; animation: fadeIn 0.6s ease-out forwards;">
+          <div id="carousel_3hwcclaws" style="display: flex; transition: transform 0.5s ease-out;">
+            
+        <img src="https://i.ibb.co/5hcHYwky/dsd.jpg" alt="Slide 1" style="width: 100%; flex-shrink: 0; object-fit: cover; height: 500px; border-radius: 16px;" />
+      
+        <img src="https://i.ibb.co/R4hFY6KJ/gfg.webp" alt="Slide 2" style="width: 100%; flex-shrink: 0; object-fit: cover; height: 500px; border-radius: 16px;" />
+      
+        <img src="https://i.ibb.co/ZRYcDnfT/ggg.jpg" alt="Slide 3" style="width: 100%; flex-shrink: 0; object-fit: cover; height: 500px; border-radius: 16px;" />
+      
+          </div>
+          <button onclick="(function(){var c=document.getElementById('carousel_3hwcclaws');var i=parseInt(c.dataset.index||0);var t=3;i=(i-1+t)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button onclick="(function(){var c=document.getElementById('carousel_3hwcclaws');var i=parseInt(c.dataset.index||0);var t=3;i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span>
+          </div>
+          <script>(function(){var c=document.getElementById('carousel_3hwcclaws');var i=0;var t=3;setInterval(function(){i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;},4000);})();</script>
+        </div>
+      </div>
+<div style="background-color: #ffffff; color: #1a1a2e; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; ">
+        <div style="display: flex; align-items: flex-start; gap: 16px;">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Maria Silva" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" />
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <h4 style="font-weight: 600; font-size: 16px; margin: 0;">Maria Silva</h4>
+              <div style="display: flex; gap: 2px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#facc15" stroke="#facc15" stroke-width="2">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+        </svg>
+      </div>
+            </div>
+            <div style="position: relative;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="position: absolute; left: -4px; top: -4px; opacity: 0.2;">
+                <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+              </svg>
+              <p style="font-size: 14px; opacity: 0.8; margin: 0; padding-left: 16px;">Minha Caligrafia melhorou muitol! Superou todas as minhas expectativas. Recomendo a todos!</p>
+            </div>
+          </div>
+        </div>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div id="oferta" style="height: 0; overflow: hidden;"></div>
+<h2 style="color: #ffffff; font-size: 28px; font-weight: 700; text-align: center; padding: 0 0 32px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.4s; opacity: 0;">Escolha Seu Plano</h2>
+<div style="background-color: #ffffff; color: #1a1a2e; text-align: center; padding: 32px; border-radius: 16px; border-color: #e5e7eb; border-width: 1px; border-style: solid; animation: scaleIn 0.5s ease-out forwards; animation-delay: 0.5s; opacity: 0; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 2px solid #e5e7eb; position: relative; overflow: hidden;">
+          
+          
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e;">Plano Básico</h3>
+          <p style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">(Pagamento único)</p>
+          
+          <div style="margin-bottom: 24px;">
+            <span style="font-size: 48px; font-weight: 800; color: #22c55e; line-height: 1;">R$ 27,00</span>
+          </div>
+          <div style="height: 1px; background-color: #e5e7eb; margin: 0 -16px 24px;"></div>
+          <div style="text-align: left; margin-bottom: 24px;">
+            
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Combo +300 atividades caligrafia</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Módulo de coordenação motora</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Módulo de alfabeto cursivo</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Módulo de lettering</span>
+        </div>
+      
+          </div>
+      <button type="button" onclick="event.preventDefault();event.stopPropagation();event.stopImmediatePropagation();var id='offer_vbf7bunhu-popup';var p=document.getElementById(id);if(p){p.style.display='flex';document.documentElement.style.overflow='hidden';document.body.style.overflow='hidden';}return false;" style="display: block; width: 100%; padding: 16px 24px; background-color: #22c55e; color: #ffffff; font-size: 16px; font-weight: 600; text-align: center; border-radius: 12px; box-shadow: 0 4px 14px #22c55e40; animation: scaleIn 0.5s ease-out forwards; border: none; cursor: pointer;">Quero o Plano Básico</button>
+        </div>
+<div style="height: 16px;"></div>
+<div style="background-color: #1e1e2e; color: #ffffff; text-align: center; padding: 32px; border-radius: 16px; border-color: #c23dff; border-width: 2px; border-style: solid; animation: scaleIn 0.5s ease-out forwards; animation-delay: 0.7000000000000001s; opacity: 0; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 2px solid #c23dff; position: relative; overflow: hidden;">
+          
+          
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #ffffff;">Plano VIP</h3>
+          <p style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Acesso VIP Vitalício</p>
+          
+          <div style="margin-bottom: 24px;">
+            <span style="font-size: 48px; font-weight: 800; color: #c23dff; line-height: 1;">R$ 47,00</span>
+          </div>
+          <div style="height: 1px; background-color: #c23dff; margin: 0 -16px 24px;"></div>
+          <div style="text-align: left; margin-bottom: 24px;">
+            
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Tudo do pacote básico
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">+250 exercícios caligrafia bônus
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Mega pack atividades infantis (+350 páginas)
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Apostila reforço para crianças
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Alfabeto letra de forma
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Alfabeto letra itálico
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Alfabeto letra medieval
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Alfabeto letra jutai côrte + vídeo
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Bônus exclusivo!
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #c23dff; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Benefício Exclusivo: Acesso vitalício! + Atualizações mensais
+</span>
+        </div>
+      
+          </div>
+      <button type="button" data-href="https://pay.lowify.com.br/go.php?offer=gt86jl3" onclick="event.preventDefault();event.stopImmediatePropagation();window.open('https://pay.lowify.com.br/go.php?offer=gt86jl3','_blank');return false;" style="display: block; width: 100%; padding: 16px 24px; background-color: #c23dff; color: #ffffff; font-size: 16px; font-weight: 600; text-align: center; border-radius: 12px; box-shadow: 0 4px 14px #c23dff40; animation: scaleIn 0.5s ease-out forwards; border: none; cursor: pointer;">Quero Garantir Meu Acesso VIP</button>
+        </div></div></div>
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="background-color: #1e1e2e; padding: 32px; border-radius: 16px; text-align: center; animation: fadeIn 0.6s ease-out forwards;">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #a600ff20, #a600ff40); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10" stroke="#a600ff" stroke-width="2"></polyline>
+          </svg>
+        </div>
+        <h3 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 16px;">Garantia de 7 Dias</h3>
+        <p style="font-size: 14px; color: #ffffff; opacity: 0.8; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">Se você não ficar 100% satisfeito com o acesso, devolvemos seu dinheiro integralmente em até 7 dias após a compra.</p>
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+          
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 14px; color: #ffffff;">Sem burocracia</span>
+        </div>
+      
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 14px; color: #ffffff;">Devolução imediata</span>
+        </div>
+      
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 14px; color: #ffffff;">Sem perguntas</span>
+        </div>
+      
+        </div>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #0f0f1a; padding-top: 40px; padding-bottom: 60px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="background-color: #1e1e2e; padding: 24px; border-radius: 16px; animation: fadeIn 0.6s ease-out forwards;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 24px; text-align: center;">Perguntas Frequentes</h3>
+        
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_phdchqare_0');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_phdchqare_icon_0');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #ffffff;">Como funciona o acesso?</span>
+            <svg id="faq_phdchqare_icon_0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_phdchqare_0" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #ffffff; opacity: 0.8; line-height: 1.6; margin: 0;">Após a compra, você receberá acesso imediato ao conteúdo digital.
+
+</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_phdchqare_1');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_phdchqare_icon_1');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #ffffff;">O pagamento é recorrente?</span>
+            <svg id="faq_phdchqare_icon_1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_phdchqare_1" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #ffffff; opacity: 0.8; line-height: 1.6; margin: 0;">Não! O pagamento é único. Você paga uma vez e tem acesso pelo tempo do plano escolhido.</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_phdchqare_2');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_phdchqare_icon_2');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #ffffff;">E se eu não gostar?</span>
+            <svg id="faq_phdchqare_icon_2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a600ff" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_phdchqare_2" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #ffffff; opacity: 0.8; line-height: 1.6; margin: 0;">Oferecemos garantia de 7 dias. Se não ficar satisfeito, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+          </div>
+        </div>
+      
+      </div>
+<!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D6L2IRBC77U9T6VFKUC0');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+<div style="padding: 20px; text-align: center;"><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1292696105881899');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1292696105881899&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code --></div>
+<div style="padding: 20px; text-align: center;"><script>
+  window.pixelId = "699a5242c7ccdf26c4319412";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script></div></div></div>
+        </div>
+    </div>
+    
+    
+    
+  <script>
+    (function() {
+      try {
+        var STORAGE_KEY = '_lowify_utm_params';
+        var trackingKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 
+                           'utm_id', 'fbclid', 'gclid', 'ref', 'src', 'sck', 'xcod', 'ttclid', 'li_fat_id'];
+        
+        // Function to get stored UTMs from localStorage
+        function getStoredUtms() {
+          try {
+            var stored = localStorage.getItem(STORAGE_KEY);
+            return stored ? JSON.parse(stored) : {};
+          } catch(e) { return {}; }
+        }
+        
+        // Function to save UTMs to localStorage
+        function saveUtms(params) {
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(params));
+          } catch(e) {}
+        }
+        
+        // Capture UTMs from the real page URL.
+        // IMPORTANT: published pages are rendered inside an iframe via srcDoc,
+        // so window.location.search inside the iframe is usually empty.
+        // We must fallback to the top/parent URL (same-origin) or referrer.
+        function getEffectiveSearch() {
+          try {
+            var s = (window.location && window.location.search) ? window.location.search : '';
+            if (s) return s;
+          } catch(e) {}
+
+          // Try top (best) then parent
+          try {
+            if (window.top && window.top !== window && window.top.location) {
+              var ts = window.top.location.search || '';
+              if (ts) return ts;
+            }
+          } catch(e) {}
+
+          try {
+            if (window.parent && window.parent !== window && window.parent.location) {
+              var ps = window.parent.location.search || '';
+              if (ps) return ps;
+            }
+          } catch(e) {}
+
+          // Last resort: parse referrer
+          try {
+            if (document.referrer) {
+              var refUrl = new URL(document.referrer);
+              return refUrl.search || '';
+            }
+          } catch(e) {}
+
+          return '';
+        }
+
+        var currentParams = getEffectiveSearch();
+        var urlParams = new URLSearchParams(currentParams || '');
+        var newUtmParams = {};
+        
+        urlParams.forEach(function(value, key) {
+          // Only capture if value is not empty
+          if (value && value.trim() !== '') {
+            var lowerKey = key.toLowerCase();
+            if (key.startsWith('utm_') || trackingKeys.includes(lowerKey)) {
+              newUtmParams[key] = value;
+            }
+          }
+        });
+        
+        // Merge with stored UTMs (new params override old ones)
+        var storedUtms = getStoredUtms();
+        var utmParams = {};
+        
+        // First add stored params (only non-empty)
+        for (var k in storedUtms) {
+          if (storedUtms[k] && storedUtms[k].trim() !== '') {
+            utmParams[k] = storedUtms[k];
+          }
+        }
+        
+        // Then override with new params from URL (only non-empty)
+        for (var k in newUtmParams) {
+          if (newUtmParams[k] && newUtmParams[k].trim() !== '') {
+            utmParams[k] = newUtmParams[k];
+          }
+        }
+        
+        // Save merged params back to localStorage
+        if (Object.keys(utmParams).length > 0) {
+          saveUtms(utmParams);
+        }
+        
+        // If no tracking params found, exit
+        if (Object.keys(utmParams).length === 0) return;
+        
+        // Function to append params to a URL (FORCE override existing params)
+        function appendParamsToUrl(url) {
+          if (!url || url === '#' || url.startsWith('javascript:')) return url;
+          
+          try {
+            var urlObj = new URL(url, window.location.origin);
+            
+            // FORCE override - always set our UTMs, replacing any existing values
+            // This ensures our tracked UTMs override "organic" or empty values
+            for (var key in utmParams) {
+              var val = utmParams[key];
+              if (val && val.trim() !== '') {
+                // Always override - remove existing and set new
+                urlObj.searchParams.delete(key);
+                urlObj.searchParams.set(key, val);
+              }
+            }
+            
+            // Also remove any empty UTM params that might be in the URL
+            var keysToCheck = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            keysToCheck.forEach(function(k) {
+              var existing = urlObj.searchParams.get(k);
+              // Remove if empty, "organic" (default), or not in our tracked params
+              if (existing !== null && (existing === '' || existing === 'organic') && !utmParams[k]) {
+                urlObj.searchParams.delete(k);
+              }
+            });
+            
+            return urlObj.toString();
+          } catch(e) {
+            // If URL parsing fails, we need to handle manually
+            // First, try to remove existing UTM params from the URL
+            var cleanUrl = url;
+            var trackingToReplace = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'];
+            trackingToReplace.forEach(function(param) {
+              // Remove param=value& or &param=value or ?param=value
+              cleanUrl = cleanUrl.replace(new RegExp('[?&]' + param + '=[^&]*', 'gi'), '');
+            });
+            // Clean up any double && or trailing ?
+            cleanUrl = cleanUrl.replace(/&&/g, '&').replace(/?&/g, '?').replace(/?$/g, '').replace(/&$/g, '');
+            
+            // Now append our params
+            var paramsToAdd = [];
+            for (var k in utmParams) {
+              var v = utmParams[k];
+              if (v && v.trim() !== '') {
+                paramsToAdd.push(encodeURIComponent(k) + '=' + encodeURIComponent(v));
+              }
+            }
+            if (paramsToAdd.length === 0) return cleanUrl || url;
+            var separator = cleanUrl.includes('?') ? '&' : '?';
+            return cleanUrl + separator + paramsToAdd.join('&');
+          }
+        }
+        
+        // Process all links on page load
+        function processLinks() {
+          var links = document.querySelectorAll('a[href]');
+          links.forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+              link.setAttribute('href', appendParamsToUrl(href));
+            }
+          });
+        }
+        
+        // Run on DOMContentLoaded
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', processLinks);
+        } else {
+          processLinks();
+        }
+        
+        // Also observe for dynamically added links (popups, etc)
+        var observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            mutation.addedNodes.forEach(function(node) {
+              if (node.nodeType === 1) {
+                if (node.tagName === 'A' && node.hasAttribute('href')) {
+                  var href = node.getAttribute('href');
+                  if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                    node.setAttribute('href', appendParamsToUrl(href));
+                  }
+                }
+                // Check child links
+                var childLinks = node.querySelectorAll ? node.querySelectorAll('a[href]') : [];
+                childLinks.forEach(function(link) {
+                  var href = link.getAttribute('href');
+                  if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                    link.setAttribute('href', appendParamsToUrl(href));
+                  }
+                });
+              }
+            });
+          });
+        });
+        
+        observer.observe(document.body || document.documentElement, { 
+          childList: true, 
+          subtree: true 
+        });
+        
+        // ===== NAVIGATION INTERCEPTORS (window.open / location / inline onclick / forms) =====
+        // Goal: pass UTMs even when navigation is triggered by JS (buttons, custom HTML, etc.)
+
+        // Intercept window.open (works in most browsers)
+        try {
+          var originalWindowOpen = window.open;
+          if (originalWindowOpen) {
+            window.open = function(url, target, features) {
+              if (url && typeof url === 'string') {
+                url = appendParamsToUrl(url);
+              }
+              return originalWindowOpen.call(window, url, target, features);
+            };
+          }
+        } catch(e) {}
+
+        // Intercept Location.assign/replace at the prototype level (more compatible than overwriting instance methods)
+        try {
+          var locProto = Object.getPrototypeOf(window.location);
+          if (locProto) {
+            if (typeof locProto.assign === 'function') {
+              var originalAssign = locProto.assign;
+              locProto.assign = function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalAssign.call(this, url);
+              };
+            }
+            if (typeof locProto.replace === 'function') {
+              var originalReplace = locProto.replace;
+              locProto.replace = function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalReplace.call(this, url);
+              };
+            }
+          }
+        } catch(e) {}
+
+        // Best-effort intercept for location.href setter (some browsers forbid redefining)
+        try {
+          var proto = Object.getPrototypeOf(window.location);
+          var hrefDescriptor = proto ? Object.getOwnPropertyDescriptor(proto, 'href') : null;
+          if (!hrefDescriptor) {
+            hrefDescriptor = Object.getOwnPropertyDescriptor(Location.prototype, 'href');
+          }
+          if (hrefDescriptor && hrefDescriptor.set) {
+            var originalHrefSetter = hrefDescriptor.set;
+            Object.defineProperty(hrefDescriptor === (proto && Object.getOwnPropertyDescriptor(proto, 'href')) ? proto : Location.prototype, 'href', {
+              get: hrefDescriptor.get,
+              set: function(url) {
+                if (url && typeof url === 'string') {
+                  url = appendParamsToUrl(url);
+                }
+                return originalHrefSetter.call(this, url);
+              },
+              configurable: true
+            });
+          }
+        } catch(e) {}
+
+        function patchInlineOnclick(el) {
+          try {
+            if (!el || !el.getAttribute) return;
+            var onclick = el.getAttribute('onclick');
+            if (!onclick) return;
+
+            // Replace any hardcoded URLs inside onclick="..." with UTM-appended versions.
+            // Works for both single and double quotes inside the attribute.
+            // NOTE: do not include the backtick char in this regex because this script is embedded in a JS template literal.
+            var replaced = onclick.replace(/(https?://[^s'"<>]+)(?![^s]*))/g, function(u) {
+              return appendParamsToUrl(u);
+            });
+
+            if (replaced !== onclick) {
+              el.setAttribute('onclick', replaced);
+            }
+          } catch(e) {}
+        }
+
+        function patchFormAction(form) {
+          try {
+            if (!form) return;
+            var action = form.getAttribute('action');
+            if (action) form.setAttribute('action', appendParamsToUrl(action));
+
+            // Also handle <button formaction="...">
+            var btns = form.querySelectorAll ? form.querySelectorAll('[formaction]') : [];
+            btns.forEach(function(b) {
+              var fa = b.getAttribute('formaction');
+              if (fa) b.setAttribute('formaction', appendParamsToUrl(fa));
+            });
+          } catch(e) {}
+        }
+
+        // Capture-phase click patching (runs before inline onclick and most listeners)
+        document.addEventListener('click', function(e) {
+          try {
+            var node = e.target;
+            while (node && node !== document.body) {
+              // Anchor: patch right before navigation
+              if (node.tagName === 'A' && node.getAttribute) {
+                var href = node.getAttribute('href');
+                if (href && href !== '#' && !href.startsWith('javascript:') && !href.startsWith('#')) {
+                  node.setAttribute('href', appendParamsToUrl(href));
+                }
+                patchInlineOnclick(node);
+                break;
+              }
+
+              // Buttons / custom clickable elements
+              if (node.getAttribute) {
+                // data-href style navigation
+                var dataHref = node.getAttribute('data-href') || node.getAttribute('data-url') || node.getAttribute('data-link');
+                if (dataHref) {
+                  var patched = appendParamsToUrl(dataHref);
+                  node.setAttribute('data-href', patched);
+                  node.setAttribute('data-url', patched);
+                  node.setAttribute('data-link', patched);
+                }
+
+                // inline onclick with hardcoded URL
+                patchInlineOnclick(node);
+
+                // if inside a form, patch form action too
+                var form = node.closest ? node.closest('form') : null;
+                if (form) patchFormAction(form);
+              }
+
+              node = node.parentElement;
+            }
+          } catch(err) {}
+        }, true);
+
+        // Patch on submit too (covers Enter-to-submit, programmatic submits, etc)
+        document.addEventListener('submit', function(e) {
+          try { patchFormAction(e.target); } catch(err) {}
+        }, true);
+        
+      } catch(e) { console.warn('UTM passthrough error:', e); }
+    })();
+  </script>
+      <script>
+        (function() {
+          try {
+            var timeLeft = 20 * 60;
+            
+            function formatTime(seconds) {
+              var mins = Math.floor(seconds / 60);
+              var secs = seconds % 60;
+              return (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+            }
+            
+            function updateTimer() {
+              var timerEl = document.getElementById('urgency-timer');
+              if (timerEl && timeLeft > 0) {
+                timerEl.textContent = formatTime(timeLeft);
+                timeLeft--;
+              }
+            }
+            
+            setInterval(updateTimer, 1000);
+            updateTimer();
+          } catch(e) { console.warn('Urgency timer error:', e); }
+        })();
+      </script>
+    <script>
+      (function() {
+        try {
+          var names = ["Letícia","Maria","Ana","Juliana","Fernanda","Camila","Beatriz","Larissa","Amanda","Gabriela","Mariana","Carolina","Rafaela","Patrícia","Bruna","Lucas","Pedro","João","Gabriel","Rafael","Bruno","Carlos","Matheus","Felipe","Gustavo","Ricardo","André","Marcelo","Thiago","Leonardo"];
+          var productName = "Acesso VIP";
+          var interval = 15 * 1000;
+          
+          function getRandomName() {
+            return names[Math.floor(Math.random() * names.length)];
+          }
+          
+          function showNotification() {
+            try {
+              var existing = document.getElementById('fake-purchase-notification');
+              if (existing) existing.remove();
+              
+              var notification = document.createElement('div');
+              notification.id = 'fake-purchase-notification';
+              notification.innerHTML = '<div style="width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;">✓</div><div><div style="font-weight:600;font-size:14px;">' + getRandomName() + ' acabou de comprar</div><div style="font-size:12px;opacity:0.8;">' + productName + '</div></div>';
+              notification.style.cssText = 'position:fixed;bottom:20px;left:20px;background-color:#22c55e;color:#ffffff;padding:12px 20px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:9998;display:flex;align-items:center;gap:12px;animation:slideInLeft 0.4s ease-out;max-width:300px;';
+              document.body.appendChild(notification);
+              
+              setTimeout(function() {
+                if (notification.parentNode) notification.remove();
+              }, 4000);
+            } catch(e) { console.warn('Fake notification render error:', e); }
+          }
+          
+          setTimeout(showNotification, 3000);
+          setInterval(showNotification, interval);
+        } catch(e) { console.warn('Fake purchase script error:', e); }
+      })();
+    </script>
+    <style>
+      @keyframes slideInLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    </style>
+    
+        <div id="offer_vbf7bunhu-popup" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.85); z-index: 2147483647; align-items: center; justify-content: center; padding: 12px; overflow-y: auto; overscroll-behavior: contain;" onclick="if(event.target===this){ document.getElementById('offer_vbf7bunhu-popup').style.display='none'; document.documentElement.style.overflow=''; document.body.style.overflow=''; }">
+          <div style="background: #1a1a2e; border-radius: 16px; padding: 20px; max-width: 360px; width: 100%; position: relative; border: 2px solid #d4a853; box-shadow: 0 0 40px #d4a85340; margin: auto;">
+            <button onclick="document.getElementById('offer_vbf7bunhu-popup').style.display='none'; document.documentElement.style.overflow=''; document.body.style.overflow='';" style="position: absolute; top: 12px; right: 12px; background: none; border: none; color: #888; cursor: pointer; font-size: 20px; line-height: 1;">&times;</button>
+            <div style="text-align: center;">
+              <span style="display: inline-block; background-color: #d4a853; color: #1a1a2e; padding: 6px 14px; border-radius: 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">UPGRADE PREMIUM</span>
+              <h3 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Pacote Premium</h3>
+              <div style="margin-bottom: 4px;">
+                <span style="font-size: 36px; font-weight: 800; color: #d4a853; line-height: 1;">R$ 37,00</span>
+              </div>
+              <p style="font-size: 13px; color: #ffffff; margin-bottom: 16px;">Acesso VITALÍCIO</p>
+              <div style="background-color: rgba(255,255,255,0.05); border-radius: 10px; padding: 14px; margin-bottom: 16px; text-align: left;">
+                <p style="font-size: 10px; font-weight: 600; text-transform: uppercase; color: #d4a853; margin-bottom: 10px;">INCLUI:</p>
+                
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Tudo do pacote básico</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">+250 exercícios caligrafia bônus</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Mega pack atividades infantis (+350 páginas)</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Apostila reforço para crianças</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Alfabeto letra de forma</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Alfabeto letra itálico</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Alfabeto letra medieval</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Alfabeto letra jutai côrte + vídeo</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Bônus exclusivo!</span>
+          </div>
+        
+          <div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 16px; height: 16px; border-radius: 50%; background-color: #d4a853; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13px; line-height: 1.4; color: #ffffff;">Benefício Exclusivo: Acesso vitalício! + Atualizações mensais</span>
+          </div>
+        
+              </div>
+               <button type="button" data-href="https://pay.lowify.com.br/go.php?offer=tj8m0d9" onclick="event.stopImmediatePropagation();window.open('https://pay.lowify.com.br/go.php?offer=tj8m0d9','_blank');" style="display: block; width: 100%; padding: 12px 16px; background-color: #d4a853; color: #1a1a2e; font-size: 14px; font-weight: 700; text-align: center; border-radius: 10px; text-decoration: none; text-transform: uppercase; margin-bottom: 8px; border: none; cursor: pointer;">Quero o Premium</button>
+               <button type="button" data-href="https://pay.lowify.com.br/go.php?offer=fu5x1ph" onclick="event.stopImmediatePropagation();window.open('https://pay.lowify.com.br/go.php?offer=fu5x1ph','_blank');" style="display: block; width: 100%; padding: 10px 16px; background-color: transparent; color: #888; font-size: 12px; font-weight: 500; text-align: center; border-radius: 10px; text-decoration: none; border: 1px solid #444; cursor: pointer;">Quero só a oferta básica</button>
+            </div>
+          </div>
+        </div>
+</body>
+</html>
